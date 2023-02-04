@@ -13,7 +13,7 @@ class Note(db.Model):
     modalidad = db.Column(db.String(1000))
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
 
-    def __init__(self, nombre, categoria, lugar, direccion, inicio, fin, modalidad):
+    def __init__(self, nombre, categoria, lugar, direccion, inicio, fin, modalidad, user_id):
         self.nombre = nombre
         self.categoria = categoria
         self.lugar = lugar
@@ -21,6 +21,7 @@ class Note(db.Model):
         self.inicio = inicio
         self.fin = fin
         self.modalidad = modalidad
+        self.user_id = user_id
 
 class User(db.Model, UserMixin): 
     #we use usermixin to don't do the login from 0
