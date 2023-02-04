@@ -10,7 +10,7 @@ fo.ramirez50@uniandes.edu.co
 
 El video se encuentra subido a YouTube en la siguiente dirección:
 
-https://youtu.be/cGJDu14uxWU
+https://youtu.be/vaOQYqM9wno
 
 Maestría MINE
 
