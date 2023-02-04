@@ -26,8 +26,8 @@ def add_note():
         fin = request.form['fin']
         modalidad = request.form['modalidad']
 
-        # create a new Contact object
-        new_note = Note(nombre, categoria, lugar, direccion, inicio, fin, modalidad)
+        # create a new note object
+        new_note = Note(nombre, categoria, lugar, direccion, inicio, fin, modalidad, user_id = current_user.id)
 
         # save the object into the database
         db.session.add(new_note)
