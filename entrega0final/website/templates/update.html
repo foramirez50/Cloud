@@ -1,0 +1,80 @@
+{% extends 'layout.html' %} 
+
+
+{% block body %}
+
+<div class="col-md-4 offset-md-4">
+  <div class="card card-body bg-dark text-white">
+    <h1>Edit Task</h1>
+
+    <form action="{{url_for('views.update', id=note.id)}}" method="POST">
+      <div class="mb-3">
+        <label for="nombre">Event name:</label>
+        <input
+          type="text"
+          name="nombre"
+          value="{{note.nombre}}"
+          class="form-control bg-dark text-white rounded-0"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="categoria">Event cathegory:</label>
+        <input
+          type="text"
+          name="categoria"
+          value="{{note.categoria}}"
+          class="form-control bg-dark text-white rounded-0"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="lugar">Event place:</label>
+        <input
+          type="text"
+          name="lugar"
+          value="{{note.lugar}}"
+          class="form-control bg-dark text-white rounded-0"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="direccion">Event address:</label>
+        <input
+          type="text"
+          name="direccion"
+          value="{{note.direccion}}"
+          class="form-control bg-dark text-white rounded-0"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="inicio">Inicial date:</label>
+        <input
+          type="text"
+          name="inicio"
+          value="{{note.inicio}}"
+          class="form-control bg-dark text-white rounded-0"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="fin">Final date:</label>
+        <input
+          type="text"
+          name="fin"
+          value="{{note.fin}}"
+          class="form-control bg-dark text-white rounded-0"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="modalidad">Virtual or presential?:</label>
+        <input
+          type="text"
+          name="modalidad"
+          value="{{note.modalidad}}"
+          class="form-control bg-dark text-white rounded-0"
+        />
+      </div>
+
+      <button class="btn btn-primary">Update</button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}
